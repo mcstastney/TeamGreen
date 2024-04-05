@@ -5,6 +5,7 @@
 + [Elisa McGarry](https://github.com/mcstastney)
 + [Emma Jourzac](https://github.com/jourzy)
 + [Majella O'Mahony](https://github.com/MadgeMom)
++ [Natalie McGreevy](https://github.com/mcgreevy1993)
 
 ### Criteria for part 1 of the assignment:
 +	Create **GitHub accounts** (if working in a team then one for each member, can use existing ones) and make a note of them in your README file / display them for easy verification
