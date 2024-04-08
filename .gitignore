@@ -1,0 +1,7 @@
+# you can list items in .gitignore that you do not want to be added to the staging area
+# you can list individual files e.g. log.txt
+# or if you want to omit all text files you can write *.txt
+# for folders located in the main directory you can write /folder_name
+
+# this is a folder in the local repo to ignore
+/emma
