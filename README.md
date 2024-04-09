@@ -4,6 +4,7 @@
 ### The members of this team are:
 + [Elisa McGarry](https://github.com/mcstastney)
 + [Emma Jourzac](https://github.com/jourzy)
++ [Katie Kennedy](https://github.com/KatieCodes365)
 + [Majella O'Mahony](https://github.com/MadgeMom)
 + [Natalie McGreevy](https://github.com/mcgreevy1993)
 
