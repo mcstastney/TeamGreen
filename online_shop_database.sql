@@ -1,6 +1,8 @@
 CREATE DATABASE online_shop;
 USE online_shop;
 
+-- DROP DATABASE online_shop;
+
 CREATE TABLE products (
 		product_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
 		product_name VARCHAR(50) NOT NULL,
@@ -68,9 +70,23 @@ CREATE TABLE customers (
 		address1 VARCHAR (200) NOT NULL,
 		address2 VARCHAR (200),
 		postcode VARCHAR(10) NOT NULL,
-		mobile INTEGER (13) NOT NULL,
+		mobile VARCHAR(15) NOT NULL,
 		CONSTRAINT pk_customer_id  PRIMARY KEY (customer_id)
 );
+
+
+-- TRUNCATE customers;
+
+INSERT INTO customers
+(first_name, last_name, email_address, address1, address2, postcode, mobile)
+VALUES 
+("Sadie", "Lock", "sadie@hotmail.com", "23 Sherlock Way", "London", "SE8 4XG", "07966 135 567"),
+("Jimmy", "Brown", "jimmyboy@gmail.com", "179 Sycamore Road", "London", "SE6 5NJ", "07944 344 211"),
+("Charlotte", "Green", "cgreen@hotmail.com", "34 Adelaide Avenue", "London", "SE6 9JJ", "07943 675 498"),
+("Alfie", "Ryan", "alfralf@gmail.com", "67 Farley Road", "London", "SE6 5GF", "07944 327 498"),
+("Roisin", "Johns", "rosie@hotmail.com", "59 Albert Road", "Manchester", "MAN 6YY", "07967 432 190"),
+("Daisy", "Duke", "daisy@hotmail.com", "21 Albacore Crescent","Bradford", "BRA 5FV", "07958 789 012"),
+("India", "Frost",  "frosty@hotmail.com", "11 Bexhill Road", "Cornwall", "COR 6XA", "07943 509 120");
 
 CREATE TABLE orders (
 		customer_id INTEGER,
