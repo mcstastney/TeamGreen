@@ -29,6 +29,6 @@
 
 #### Checking the status of a file
 
-![Screenshot of a git status command showing a file that has been modified.](https://drive.google.com/file/d/1TATiLJHCIR_EJnnO7dUff9VBM8cmc8nN/view?usp=sharing?raw=true)
+![Screenshot of a git status command showing a file that has been modified.](/assets/images/check_status.png?raw=true)
 
 
