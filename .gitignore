@@ -5,3 +5,8 @@
 
 # this is a folder in the local repo to ignore
 /emma
+
+# ignore .venv folder
+/.venv
+
+
