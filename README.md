@@ -31,4 +31,30 @@
 
 ![Screenshot of a git status command showing a file that has been modified.](/assets/images/check_status.png?raw=true)
 
+#### Creating a branch
+
+![Screenshot of a branch being created.](/assets/images/create_branch.png?raw=true)
+
+#### Adding files a branch
+
+![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
+
+NEED TO ADD AT LEAST ONE MORE HERE AS SAYS FILES PLURAL!!!!
+
+#### Adding commits with meaningful messages
+
+![Screenshot of a commit with a meaningful message.](/assets/images/commit_message1.png?raw=true)
+
+NEED TO ADD AT LEAST ONE MORE HERE AS SAYS COMMITS PLURAL!!!!
+
+#### Opening a pull request
+
+![Screenshot showing an open pull request.](/assets/images/pull_request3.png?raw=true)
+
+#### Merging and deploying to main branch
+
+![Screenshot of a pull request being accepted and files deployed to main branch.](/assets/images/?????.png?raw=true)
+
+
+
 
