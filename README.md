@@ -63,6 +63,9 @@ NEED TO ADD AT LEAST ONE MORE HERE AS SAYS COMMITS PLURAL!!!!
 
 #### Opening a pull request
 
+![Screenshot of completion of PUSH request and signpost to Github to PULL request](https://github.com/mcstastney/TeamGreen/assets/136608321/3b43454c-2c73-4917-bce1-e002c760722c)
+
+
 ![Screenshot showing an open pull request.](/assets/images/pull_request3.png?raw=true)
 
 #### Merging and deploying to main branch
