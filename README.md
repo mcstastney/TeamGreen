@@ -1,5 +1,7 @@
-# TeamElemella
-## This is a private repository for our group project for Assignment 4 - Git, GitHub, APIs.
+# TeamGreen
+## When the going gets tough, the tough get growing. 
+
+### A private repository for our group project for Assignment 4 - Git, GitHub, APIs.
 
 ### The members of this team are:
 + [Elisa McGarry](https://github.com/mcstastney)
