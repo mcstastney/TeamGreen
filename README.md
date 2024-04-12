@@ -37,6 +37,9 @@
 
 ![Screenshot of a branch being created.](/assets/images/create_branch.png?raw=true)
 
+![Screenshot of confirmation branch was ceated](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
+
+
 #### Adding files a branch
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
