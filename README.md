@@ -33,22 +33,31 @@
 
 ![Screenshot of a git status command showing a file that has been modified.](/assets/images/check_status.png?raw=true)
 
+![Screenshot of a git status showing a file that has been modified](https://github.com/mcstastney/TeamGreen/assets/136608321/5a316040-e652-4a7b-b12e-c22c482b9187)
+
+
 #### Creating a branch
 
 ![Screenshot of a branch being created.](/assets/images/create_branch.png?raw=true)
 
-![Screenshot of confirmation branch was ceated](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
+![Screenshot of confirmation branch was created](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
 
 
 #### Adding files a branch
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
 
+
+
+
 NEED TO ADD AT LEAST ONE MORE HERE AS SAYS FILES PLURAL!!!!
 
 #### Adding commits with meaningful messages
 
 ![Screenshot of a commit with a meaningful message.](/assets/images/commit_message1.png?raw=true)
+
+![Screenshot of a commit with a meaningful message](https://github.com/mcstastney/TeamGreen/assets/136608321/c2a0a087-a5b6-4392-9073-73eba853e273)
+
 
 NEED TO ADD AT LEAST ONE MORE HERE AS SAYS COMMITS PLURAL!!!!
 
