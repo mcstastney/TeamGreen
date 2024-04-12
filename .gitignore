@@ -9,4 +9,7 @@
 # ignore .venv folder
 /.venv
 
+# ignore config file
+config.py
+
 

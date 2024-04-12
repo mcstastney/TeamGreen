@@ -6,7 +6,8 @@ from config import HOST, USER, PASSWORD
 
 db_name = "online_shop"
 
-
+class DbConnectionError(Exception):
+    pass
 
 #   Connect to database using the credentials imported from config file
 
