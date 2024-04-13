@@ -54,7 +54,11 @@ def get_all_records():
         print("Connected to DB: %s" % db_name)
 
         #   Query to select all data in 'products' table
-        query = "SELECT * FROM products" #  Edit this query to only show useful info to customer i.e. product_name, product_description, price)
+        query = """select p.product_id, p.product_name, c.category_name, p.price, p.stock_quantity
+                   from products as p
+                   inner join categories as c
+                   where p.product_category = c.category_id
+                   order by p.product_name;""" #  Edit this query to only show useful info to customer i.e. product_name, product_description, price)
         my_cursor.execute(query)
         result = my_cursor.fetchall() # this is a list with db records where each record is a tuple
 
@@ -73,7 +77,63 @@ def get_all_records():
             db_connection.close()
             print("DB connection is closed")
 
+def get_categories():
+    try:
+        db_name = "online_shop"
+        db_connection = _connect_to_specific_db(db_name)
+        my_cursor = db_connection.cursor()
+        print("Connected to DB: %s" % db_name)
+
+        #   Query to select all categories of product
+        query = """select c.category_id, c.category_name
+                   from categories as c;""" 
+        my_cursor.execute(query)
+        result = my_cursor.fetchall() # this is a list with db records where each record is a tuple
+        my_cursor.close()
+
+        print(result)
+        return result
+
+    except Exception:
+        raise DbConnectionError("Failed to read data from DB")
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+def get_products_by_cat(category):
+    try:
+        db_name = "online_shop"
+        db_connection = _connect_to_specific_db(db_name)
+        my_cursor = db_connection.cursor()
+        print("Connected to DB: %s" % db_name)
+
+        #   Query to select all product within a given category
+        query = """select p.product_id, p.product_name, c.category_name, p.price, p.stock_quantity
+                from products as p
+                inner join categories as c on p.product_category = c.category_id
+                where c.category_name = '{category}'
+                order by p.product_name;""".format(category=category)
+        my_cursor.execute(query)
+        result = my_cursor.fetchall() # this is a list with db records where each record is a tuple
+        my_cursor.close()
+
+        print(result)
+        return result
+
+    except Exception:
+        raise DbConnectionError("Failed to read data from DB")
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+
 get_all_records()
+get_categories()
+get_products_by_cat("Plant")
 
 
 

@@ -8,8 +8,10 @@
 
 # ignore .venv folder
 /.venv
+/__pycache__
 
-# ignore config file
+# ignore these files
 config.py
+test.py
 
 

@@ -2,7 +2,7 @@
 # pip install flask
 
 from flask import Flask, request, jsonify
-from db_utils import get_all_records
+from db_utils import get_all_records, get_categories, get_products_by_cat
 
 
 #   Create application
@@ -26,7 +26,17 @@ def show_products():
     res = get_all_records() # function imported from db_utils file
     return jsonify(res)
 
+#   Categories page (GET endpoint)
 
+@app.route('/categories')
+def show_categories():
+    res = get_categories() # function imported from db_utils file
+    return jsonify(res)
+
+@app.route('/products/<category>')
+def show_products_cat(category):
+    res = get_products_by_cat(category)
+    return jsonify(res)
 
 
 # run flask server / application with debug
