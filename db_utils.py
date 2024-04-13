@@ -1,6 +1,3 @@
-#   Before running the program, in terminal run the following:
-#   pip install mysql-connector-python
-
 import mysql.connector
 from config import HOST, USER, PASSWORD
 
@@ -58,7 +55,7 @@ def get_all_records():
                    from products as p
                    inner join categories as c
                    where p.product_category = c.category_id
-                   order by p.product_name;""" #  Edit this query to only show useful info to customer i.e. product_name, product_description, price)
+                   order by p.product_name;"""
         my_cursor.execute(query)
         result = my_cursor.fetchall() # this is a list with db records where each record is a tuple
 
@@ -131,55 +128,47 @@ def get_products_by_cat(category):
             print("DB connection is closed")
 
 
+def insert_new_product(record):
+    try:
+        #  connect to db
+        db_name = "online_shop"
+        db_connection = _connect_to_specific_db(db_name)
+        my_cursor = db_connection.cursor()
+
+        #  query
+        query = """INSERT INTO products ({}) VALUES ('{}', '{}', '{}', '{}', {})""".format(
+            ', '.join(record.keys()),
+            record['product_id'],
+            record['product_name'],
+            record['product_category'],
+            record['price'],
+            record['stock_quantity'],
+        )
+
+        my_cursor.execute(query)
+        db_connection.commit()  # VERY IMPORTANT, otherwise, rows would not be added or reflected in the DB!
+        my_cursor.close()
+
+    except Exception:
+        raise DbConnectionError()
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+    print("{} added to database".format(record['product_name']))
+
+
+#   Sample record for testing purposes
+# testrecord = {
+#     'product_id': 11,
+#     'product_name': 'Gooseberry bush',
+#     'product_category': 'Plant',
+#     'price': 5.00,
+#     'stock_quantity': 35}
+# insert_new_product(testrecord)
+
 get_all_records()
 get_categories()
 get_products_by_cat("Plant")
-
-
-
-
-# TEST CODE - Insert new product into the 'products' table in the 'online_shop' DB
-
-# record = {
-#     'product_id': 46,
-#     'product_name': 'Blue Spruce',
-#     'product_description': 'Blue Spruce has a strong blue tinge to its needles which makes it a very desirable Christmas Tree.',
-#     'price': 35.00,
-#     'stock_quantity': 35,
-# }
-
-
-# def insert_new_record(record):
-#     try:
-#         #  connect to db
-#         db_name = "online_shop"
-#         db_connection = _connect_to_specific_db(db_name)
-#         my_cursor = db_connection.cursor()
-#         print("Connected to DB: %s" % db_name)
-#
-#         #  query
-#         query = """INSERT INTO products ({}) VALUES ('{}', '{}', '{}', '{}', {})""".format(
-#             ', '.join(record.keys()),
-#             record['product_id'],
-#             record['product_name'],
-#             record['product_description'],
-#             record['price'],
-#             record['stock_quantity'],
-#         )
-#
-#         my_cursor.execute(query)
-#         db_connection.commit()  # VERY IMPORTANT, otherwise, rows would not be added or reflected in the DB!
-#         my_cursor.close()
-#
-#
-#     except Exception:
-#         raise DbConnectionError("Failed to read data from DB")
-#
-#     finally:
-#         if db_connection:
-#             db_connection.close()
-#             print("DB connection is closed")
-#
-#     print("New product added to database")
-#
-# insert_new_record(record)

@@ -22,12 +22,13 @@ VALUES
 CREATE TABLE products (
 		product_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
 		product_name VARCHAR(50) NOT NULL,
-        product_category VARCHAR(50) NOT NULL,
+        product_category INTEGER NOT NULL,
 		price FLOAT(2) NOT NULL, 
 		stock_quantity INTEGER NOT NULL,
-        CONSTRAINT pk_product_id PRIMARY KEY (product_id)
+        CONSTRAINT pk_product_id PRIMARY KEY (product_id),
+        CONSTRAINT fk_category_id FOREIGN KEY (product_category) REFERENCES categories(category_id)
  );
- 
+
  -- DROP TABLE products;
 
 INSERT INTO products
