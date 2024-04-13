@@ -6,10 +6,13 @@
 # folders in the local repo to ignore
 /emma
 /.venv
-/__pychache__
 
-# ignore config file
+/__pycache__
+
+
+# ignore these files
 config.py
+test.py
 
 
 
