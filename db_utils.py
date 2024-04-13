@@ -160,6 +160,56 @@ def insert_new_product(record):
     print("{} added to database".format(record['product_name']))
 
 
+def get_all_customer_details():
+    try:
+            #connect to db
+            db_name="online_shop"
+            db_connection = _connect_to_specific_db(db_name)
+            my_cursor = db_connection.cursor()
+            print("Connected to DB: %s"  % db_name)
+            query = "SELECT * from online_shop.customers"
+            my_cursor.execute(query)
+            result = my_cursor.fetchall()
+            my_cursor.close()
+
+            print(result)
+            return result
+    except Exception:
+          raise dbconnectionError("Fail to read data from BD")
+    
+    finally:
+          if db_connection:
+                db_connection.close()
+                print("DB connection is closed")
+
+
+def get_specific_customer_detail(email_address):
+    try:
+        db_name = "online_shop"
+        db_connection = _connect_to_specific_db(db_name)
+        my_cursor = db_connection.cursor()
+        print("Connected to DB: %s" % db_name)
+
+        #   Query to select all product within a given category
+        query = """select * from online_shop.customers
+                where email_address = '{email_address}';""".format(email_address=email_address)
+        print(query)
+        my_cursor.execute(query)
+        result = my_cursor.fetchall() # this is a list with db records where each record is a tuple
+        my_cursor.close()
+
+        print(result)
+        return result
+
+    except Exception:
+        raise DbConnectionError("Failed to read data from DB")
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+
 #   Sample record for testing purposes
 # testrecord = {
 #     'product_id': 11,
@@ -169,6 +219,8 @@ def insert_new_product(record):
 #     'stock_quantity': 35}
 # insert_new_product(testrecord)
 
-get_all_records()
-get_categories()
-get_products_by_cat("Plant")
+#get_all_records()
+#get_categories()
+#get_products_by_cat("Plant")
+
+#get_specific_customer("daisy@hotmail.com")
