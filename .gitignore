@@ -3,15 +3,16 @@
 # or if you want to omit all text files you can write *.txt
 # for folders located in the main directory you can write /folder_name
 
-# this is a folder in the local repo to ignore
+# folders in the local repo to ignore
 /emma
-
-# ignore .venv folder
 /.venv
+
 /__pycache__
+
 
 # ignore these files
 config.py
 test.py
+
 
 
