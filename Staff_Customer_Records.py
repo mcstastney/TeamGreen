@@ -50,14 +50,6 @@ def get_specific_customer(email_address):
     return result.json()
 
 
-#these inputs and function were used to test retrieving customer records from database in the creation of this script - ignore these - but can be useful to use on their own outside of the mene
-# customers = get_all_customers()
-# display_customers(customers)
-# email_address = input("Enter customer email: ")
-# specific_customer = get_specific_customer(email_address)
-# display_customers(specific_customer)
-
-
 #record is dictionary format, key value pairs needed to populate entire customer record and mirrors database online_shop
 #result is what is posted to database using HTTP post request
 def add_to_customer(customer_id, first_name, last_name, email_address, address1, address2, postcode, mobile):
@@ -80,18 +72,6 @@ def add_to_customer(customer_id, first_name, last_name, email_address, address1,
         data=json.dumps(record)
     )
     return result.json()
-
-#these inputs and function were used to test add customer to database in the creation of this script - ignore these - but can be useful to use on their own outside of the menu
-# customer_id = int(input("Enter customer ID: "))
-# first_name = input("Enter first name: ")
-# last_name = input("Enter last name: ")
-# email_address = input("Enter email address: ")
-# address1 = input("Enter address1: ")
-# address2 = input("Enter address2: ")
-# postcode = input("Enter postcode: ")
-# mobile = input("Enter mobile: ")
-# add_to_customer(customer_id, first_name, last_name, email_address, address1, address2, postcode, mobile)
-
 
 #really important the RUN function is placed at the end of the other functions it will call.
 def main_menu_staff():
@@ -134,3 +114,21 @@ def run():
 print("\n\t>>>\tWelcome to Team Green's Staff Portal\t<<<")
 print("\n>>>\tWhen the going gets tough, the tough get growing! \t<<<\n")
 run()
+
+#these inputs and function were used to test add customer to database in the creation of this script - ignore these - but can be useful to use on their own outside of the menu
+# customer_id = int(input("Enter customer ID: "))
+# first_name = input("Enter first name: ")
+# last_name = input("Enter last name: ")
+# email_address = input("Enter email address: ")
+# address1 = input("Enter address1: ")
+# address2 = input("Enter address2: ")
+# postcode = input("Enter postcode: ")
+# mobile = input("Enter mobile: ")
+# add_to_customer(customer_id, first_name, last_name, email_address, address1, address2, postcode, mobile)
+
+#these inputs and function were used to test retrieving customer records from database in the creation of this script - ignore these - but can be useful to use on their own outside of the mene
+# customers = get_all_customers()
+# display_customers(customers)
+# email_address = input("Enter customer email: ")
+# specific_customer = get_specific_customer(email_address)
+# display_customers(specific_customer)

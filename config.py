@@ -1,7 +1,7 @@
 # Add in your local config details below
 
-HOST = "localhost"
+HOST = ""
 
-USER = "root"
+USER = ""
 
-PASSWORD = ""
+PASSWORD = " "
