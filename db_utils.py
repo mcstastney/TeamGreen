@@ -182,7 +182,7 @@ def get_all_customer_details():
                 db_connection.close()
                 print("DB connection is closed")
 
-
+#this function is used to obtain all customer records
 def get_specific_customer_detail(email_address):
     try:
         db_name = "online_shop"
@@ -209,6 +209,39 @@ def get_specific_customer_detail(email_address):
             db_connection.close()
             print("DB connection is closed")
 
+def insert_new_customer(record):
+    try:
+        #  connect to db
+        db_name = "online_shop"
+        db_connection = _connect_to_specific_db(db_name)
+        my_cursor = db_connection.cursor()
+
+        #  query
+        query = """INSERT INTO customers ({}) VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')""".format(
+            ', '.join(record.keys()),
+            record['customer_id'],
+            record['first_name'],
+            record['last_name'],
+            record['email_address'],
+            record['address1'],
+            record['address2'],
+            record['postcode'],
+            record['mobile'],
+        )
+
+        my_cursor.execute(query)
+        db_connection.commit()  # VERY IMPORTANT, otherwise, rows would not be added or reflected in the DB!
+        my_cursor.close()
+
+    except Exception:
+        raise DbConnectionError()
+
+    finally:
+        if db_connection:
+            db_connection.close()
+            print("DB connection is closed")
+
+    print("{} added to database".format(record['email_address']))
 
 #   Sample record for testing purposes
 # testrecord = {
