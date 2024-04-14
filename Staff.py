@@ -5,7 +5,6 @@
 import requests
 import json
 
-
 #   Add product to stocklist
 def add_to_stock(id, name, category, price, qty):
 
@@ -30,3 +29,4 @@ prod_category = int(input("Enter category ID (\n1. Plant, \n2. Compost, \n3. Gar
 prod_price = float(input("Unit price: "))
 prod_qty = int(input("How many do you want to add to stock?: "))
 add_to_stock(prod_id, prod_name, prod_category, prod_price, prod_qty)
+
