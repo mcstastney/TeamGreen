@@ -136,9 +136,8 @@ def insert_new_product(record):
         my_cursor = db_connection.cursor()
 
         #  query
-        query = """INSERT INTO products ({}) VALUES ('{}', '{}', '{}', '{}', {})""".format(
+        query = """INSERT INTO products ({}) VALUES ('{}', '{}', '{}', {})""".format(
             ', '.join(record.keys()),
-            record['product_id'],
             record['product_name'],
             record['product_category'],
             record['price'],
@@ -217,9 +216,8 @@ def insert_new_customer(record):
         my_cursor = db_connection.cursor()
 
         #  query
-        query = """INSERT INTO customers ({}) VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')""".format(
+        query = """INSERT INTO customers ({}) VALUES ('{}', '{}', '{}', '{}', '{}', '{}', '{}')""".format(
             ', '.join(record.keys()),
-            record['customer_id'],
             record['first_name'],
             record['last_name'],
             record['email_address'],

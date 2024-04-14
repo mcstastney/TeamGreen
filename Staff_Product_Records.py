@@ -9,7 +9,6 @@ import json
 def add_to_stock(id, name, category, price, qty):
 
     record = {
-        "product_id": id,
         "product_name": name,
         "product_category": category,
         "price": price,
@@ -23,10 +22,9 @@ def add_to_stock(id, name, category, price, qty):
     )
     return result.json()
 
-prod_id = int(input("Enter product ID: "))
 prod_name = input("Enter product name: ")
 prod_category = int(input("Enter category ID (\n1. Plant, \n2. Compost, \n3. Gardening tool, \n4. Other:\n "))
 prod_price = float(input("Unit price: "))
 prod_qty = int(input("How many do you want to add to stock?: "))
-add_to_stock(prod_id, prod_name, prod_category, prod_price, prod_qty)
+add_to_stock(prod_name, prod_category, prod_price, prod_qty)
 
