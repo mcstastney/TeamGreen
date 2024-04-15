@@ -7,7 +7,6 @@ app = Flask(__name__)
 
 
 #   Homepage (GET endpoint. NB: because GET is the default, don't need to specify the methods)
-
 @app.route("/")
 def home():
     # data returned to user when they access this route
@@ -16,14 +15,13 @@ def home():
 
 
 #   Products page (GET endpoint)
-
 @app.route('/products')
 def show_products():
     res = get_all_records() # function imported from db_utils file
     return jsonify(res)
 
-#   Categories pages (GET endpoint)
 
+#   Categories pages (GET endpoint)
 @app.route('/categories')
 def show_categories():
     res = get_categories() # function imported from db_utils file
@@ -36,13 +34,13 @@ def show_products_cat(category):
 
 
 #   Add a new product to products (POST endpoint)
-
 @app.route('/insertproduct', methods=['POST'])
 def add_new_product():
     record = request.get_json()
     insert_new_product(record)
     print(record)
     return jsonify(record)
+
 
 # (GET endpoint) used to display customer details
 @app.route ('/staff/customers')
@@ -51,6 +49,8 @@ def show_customer_details():
     return jsonify(res)
 #   Add a new product to products (POST endpoint)
 
+
+# (POST endpoint) to add a customer review
 @app.route('/addreview', methods=['POST'])
 def add_new_review():
     review = request.get_json()
@@ -59,15 +59,14 @@ def add_new_review():
     return jsonify(review)
 
 
-
-# (GET endpoint) used to displayto locate customer record by email
+# (GET endpoint) used to locate customer record by email
 @app.route ('/staff/customers/<email_address>')
 def get_specific_customer(email_address):
     res = get_specific_customer_detail(email_address) # function imported from db_utils file
     return jsonify(res)
 
 
-#(POST endpoint) where will add a new customer record
+#(POST endpoint) where we will add a new customer record
 @app.route ('/staff/insertcustomers', methods=['POST'])
 def add_new_customer():
     record = request.get_json()
@@ -75,9 +74,24 @@ def add_new_customer():
     print(record)
     return jsonify(record)
 
+
+
+
 # run flask server / application with debug
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+# Code for future development
+
+# Add a new order to orders table (POST endpoint)
+# @app.route('/insertorder', methods=['POST'])
+# def add_new_order():
+#     order = request.get_json()
+#     insert_new_order(order)
+#     print(order)
+#     return jsonify(order)
 
 
 
