@@ -72,6 +72,26 @@ VALUES
 ("Daisy", "Duke", "daisy@hotmail.com", "21 Albacore Crescent","Bradford", "BRA 5FV", "07958 789 012"),
 ("India", "Frost",  "frosty@hotmail.com", "11 Bexhill Road", "Cornwall", "COR 6XA", "07943 509 120");
 
+CREATE TABLE reviews (
+    review_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
+    product_id INTEGER NOT NULL,
+    rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    review_text TEXT,
+    review_date TIMESTAMP,
+    CONSTRAINT pk_review_id PRIMARY KEY (review_id),
+    CONSTRAINT fk_review_product_id FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+INSERT INTO reviews (product_id, rating, review_text, review_date)
+VALUES
+    (1, 4, "Beautiful flowers", "2019-06-20 14:45:00"),
+    (2, 5, "My grass looks amazing!", "2021-08-02 09:30:00"),
+    (3, 3, "Trays could be sturdier.", "2021-04-18 12:20:00"),
+    (4, 5, "Very happy with my purchase.", "2021-07-15 08:10:00"),
+    (5, 4, "A lovely plant.", "2021-07-15 08:10:00");
+    
+SELECT * FROM reviews;
+
 CREATE TABLE orders (
 		customer_id INTEGER,
 		order_id INTEGER UNIQUE,
@@ -89,23 +109,5 @@ CREATE TABLE shopping_basket (
 		CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
-CREATE TABLE reviews (
-    review_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
-    product_id INTEGER NOT NULL,
-    rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
-    review_text TEXT,
-    review_date DATE,
-    CONSTRAINT pk_review_id PRIMARY KEY (review_id),
-    CONSTRAINT fk_review_product_id FOREIGN KEY (product_id) REFERENCES products(product_id)
-);
 
-INSERT INTO reviews (product_id, rating, review_text, review_date)
-VALUES
-    (1, 4, "Beautiful flowers", "2023-06-15"),
-    (2, 5, "My grass looks amazing!", "2023-07-02"),
-    (3, 3, "Trays could be sturdier.", "2023-08-10"),
-    (4, 5, "Very happy with my purchase.", "2023-09-21"),
-    (5, 4, "A lovely plant.", "2023-10-05");
-    
-SELECT * FROM reviews;
 
