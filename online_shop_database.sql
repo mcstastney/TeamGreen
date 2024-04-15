@@ -89,17 +89,23 @@ CREATE TABLE shopping_basket (
 		CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
-select p.product_name, c.category_name, p.price, p.stock_quantity
-from products as p
-inner join categories as c
-where p.product_category = c.category_id
-order by p.product_name;
+CREATE TABLE reviews (
+    review_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT,
+    product_id INTEGER NOT NULL,
+    rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    review_text TEXT,
+    review_date DATE,
+    CONSTRAINT pk_review_id PRIMARY KEY (review_id),
+    CONSTRAINT fk_review_product_id FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
 
-select c.category_id, c.category_name
-from categories as c;
+INSERT INTO reviews (product_id, rating, review_text, review_date)
+VALUES
+    (1, 4, "Beautiful flowers", "2023-06-15"),
+    (2, 5, "My grass looks amazing!", "2023-07-02"),
+    (3, 3, "Trays could be sturdier.", "2023-08-10"),
+    (4, 5, "Very happy with my purchase.", "2023-09-21"),
+    (5, 4, "A lovely plant.", "2023-10-05");
+    
+SELECT * FROM reviews;
 
-select p.product_id, p.product_name, c.category_name, p.price, p.stock_quantity
-                from products as p
-                inner join categories as c on p.product_category = c.category_id
-                where c.category_name = "Plant"
-                order by p.product_name;

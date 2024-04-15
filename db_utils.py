@@ -22,7 +22,20 @@ def _connect_to_specific_db(database_name):
 
 _connect_to_specific_db(db_name)
 
-
+# The following code connects you to shop_online MySQL database. 
+#Ensure you have entered your details in the config.py file
+def connect_to_db():
+    try:
+        connection = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
+            database='online_shop'
+        )
+        print("Connected to MySQL database")
+        return connection
+    except mysql.connector.Error as err:
+        print("Error:", err)
 
 # Show all tables in database
 
@@ -159,6 +172,92 @@ def insert_new_product(record):
     print("{} added to database".format(record['product_name']))
 
 
+# Following code allocates relevent product id to the product name entered by user
+def get_product_id(product_name):
+    try:
+        connection = connect_to_db()
+        cursor = connection.cursor()
+        sql = "SELECT product_id FROM products WHERE product_name = %s"
+        cursor.execute(sql, (product_name,))
+        result = cursor.fetchone()
+        if result:
+            return result[0]  # Return the correct product ID for the product name entered
+        else:
+            print("Product not found.")
+            return None
+    except mysql.connector.Error as err:
+        print("Error:", err)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+# Adds a new review to the 'reviews' table once user has completed their answers
+# Adds time stamp of the date user adds the review
+def add_review(product_name, rating, review_text):
+    try:
+        product_id = get_product_id(product_name)
+        if product_id is not None:
+            connection = connect_to_db()
+            cursor = connection.cursor()
+            sql = "INSERT INTO reviews (product_id, rating, review_text, review_date) VALUES (%s, %s, %s, NOW())"
+            values = (product_id, rating, review_text)
+            cursor.execute(sql, values)
+            connection.commit()
+            print("Review added successfully")
+    except mysql.connector.Error as err:
+        print("Error:", err)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+
+# Following code allocates relevent product id to the product name entered by user
+def get_product_id(product_name):
+    try:
+        connection = connect_to_db()
+        cursor = connection.cursor()
+        sql = "SELECT product_id FROM products WHERE product_name = %s"
+        cursor.execute(sql, (product_name,))
+        result = cursor.fetchone()
+        if result:
+            return result[0]  # Return the correct product ID for the product name entered
+        else:
+            print("Product not found.")
+            return None
+    except mysql.connector.Error as err:
+        print("Error:", err)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+# Adds a new review to the 'reviews' table once user has completed their answers
+# Adds time stamp of the date user adds the review
+def add_review(product_name, rating, review_text):
+    try:
+        product_id = get_product_id(product_name)
+        if product_id is not None:
+            connection = connect_to_db()
+            cursor = connection.cursor()
+            sql = "INSERT INTO reviews (product_id, rating, review_text, review_date) VALUES (%s, %s, %s, NOW())"
+            values = (product_id, rating, review_text)
+            cursor.execute(sql, values)
+            connection.commit()
+            print("Review added successfully")
+    except mysql.connector.Error as err:
+        print("Error:", err)
+    finally:
+        if connection.is_connected():
+            cursor.close()
+            connection.close()
+            print("MySQL connection is closed")
+
+
 def get_all_customer_details():
     try:
             #connect to db
@@ -174,7 +273,7 @@ def get_all_customer_details():
             print(result)
             return result
     except Exception:
-          raise dbconnectionError("Fail to read data from BD")
+          raise DbConnectionError("Fail to read data from DB")
     
     finally:
           if db_connection:

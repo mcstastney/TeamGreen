@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from db_utils import get_all_records, get_categories, get_products_by_cat, insert_new_product, get_all_customer_details, get_specific_customer_detail, insert_new_customer
+from db_utils import get_all_records, get_categories, get_products_by_cat, insert_new_product, get_all_customer_details, get_specific_customer_detail, insert_new_customer, add_review
 
 
 #   Create application
@@ -49,6 +49,15 @@ def add_new_product():
 def show_customer_details():
     res = get_all_customer_details() # function imported from db_utils file
     return jsonify(res)
+#   Add a new product to products (POST endpoint)
+
+@app.route('/addreview', methods=['POST'])
+def add_new_review():
+    review = request.get_json()
+    add_review(review)
+    print(review)
+    return jsonify(review)
+
 
 
 # (GET endpoint) used to displayto locate customer record by email
