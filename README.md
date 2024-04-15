@@ -99,7 +99,7 @@ Once the final input is made, confirmation is made clear to the user through a s
 ### Quit the Main_Staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
-![Staff portal confirmation of new product entry screenshot](aassets/images/How to use the program/Staff portal confirmation of new product entry screenshot.png?raw=true)
+[!Staff portal confirmation of new product entry screenshot](assets/images/How to use the program/Staff portal confirmation of new product entry screenshot.png?raw=true)
 
 ### Functionality of Main_Customer.py and how to use it
 To be added
