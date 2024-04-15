@@ -100,7 +100,7 @@ def main_menu_staff():
     selection = is_number(msg)
     return selection
 
-#this is the functions and input to run alongside the numbered options in the menu
+# Functions and input to run alongside the numbered options in the menu
 def run():
     while True:
         option = main_menu_staff()
