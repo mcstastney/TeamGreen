@@ -50,15 +50,15 @@ requirements.txt is a file that contains a list of packages and libraries that y
 For TeamGreen's project, you can run: **pip install -r requirements.txt** in your Python / VSC terminal to install all of the relevant packages from the requirements.txt file. 
 
 ## How to use the project
-There are two main.py files: **Main_customer.py** and **Main_staff.py**.  Users can directly interact with the API by running the functions within the main.py files. 
+There are two main.py files: **main_customer.py** and **main_staff.py**.  Users can directly interact with the API by running the functions within the main.py files. 
 
-Main_customer.py has been designed to be accessed directly by customers to use for retail shopping purposes. 
+main_customer.py has been designed to be accessed directly by customers to use for retail shopping purposes. 
 
-Main_staff.py has been designed to be accessed directly by staff to use for business administration purposes. 
+main_staff.py has been designed to be accessed directly by staff to use for business administration purposes. 
 
-### Functionality of Main_Staff.py and how to use it
+### Functionality of main_staff.py and how to use it
 
-When first running the Main_Staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
+When first running the main_staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
 ![Staff portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
 
 ### Search all customer records
@@ -103,34 +103,46 @@ Once the final input is made, confirmation is made clear to the user through a s
 
 ![Staff portal show customer table with new record screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/037709f6-a2c0-4814-b1e8-836513eb7362)
 
-### Quit the Main_Staff program at anytime	
+### Quit the main_staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
 ![Staff portal confirmation of new product entry screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/6aca3d93-716a-455c-80c9-579995b55d72)
 
 
-### Functionality of Main_Customer.py and how to use it
+### Functionality of main_customer.py and how to use it
 
-As with staff, when first running the Main_Customer.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number.
+As with staff, when first running the main_customer.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number.
 
-![Customer portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
+![Customer portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/cust_main_menu.png)
 
 The first option is to view all products. This will display all the products in a user friendly format.
-The user can then make a selection. Choosing to add a product to their basket by inputting the product code.
+The user can then add a product to their basket by inputting the product code.
+
+![All products screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/all_products.png)
+
 Then the user is prompted to input the quantity of the item they want to buy and their shopping basket is updated and displayed. The user can do this as many times as they want until they press 0 to return to the main menu.
 
-
+![Add product screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/add_product.png)
 
 There is also an option for the user to shop by product category. They select the product category they wish to view and then are taken to a products page showing only the required products.
 
-Once the user has finished shopping they have more options. They can view their basket. This shows each item ordered and how many they have ordered. In further iterations, the screen will show the total cost for each product and the overal cost to help the user with their purchase.
+![Choose category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/choose_category.png)
+
+![Products by category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/products_by_category.png)
+
+The user can also view their basket. This shows each item ordered and how many they have ordered. In further iterations, the screen will show the total cost for each product and the overal cost to help the user with their purchase.
+
+![View basket screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/view_basket.png)
+
+![Make purchase screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/make_purchase.png)
 
 There is also an option for the user to add a review.
 
 In further iterations of the app, users will be able to search for products by entering the name or part of the name.
 
-If they decide not to procede with their shopping, the user can quit the program. 
+![Under development screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/search_specific_product.png)
 
+If they decide not to procede with their shopping, the user can quit the program. 
 
 ## Credits
 ### TeamGreen members
@@ -152,9 +164,9 @@ I am a career switcher on a full-stack developer journey.  My background is in e
 So I did things a bit backwards - I taught a subject, and now I'm learning it! With over ten years encouraging young girls to consider a career in tech, I have made the jump myself.
 
 Previous CFG degree projects:
-- An app in JavaScript where users can find their perfect houseplant by filtering on criteria such as sunlight and room humidity.
-- An app in Python where users can search for Yoga poses and add them to a Yoga practice, saved to a text file.
-- A database for a therapist, assisting with diary management and bookings, recording session notes and client data, as well as keeping track of income and expenses.
+- [Find your perfect houseplant](https://github.com/jourzy/search-plants) - An app in JavaScript where users can find their perfect houseplant by filtering on criteria such as sunlight and room humidity.
+- [Yoga practice generator](https://github.com/jourzy/yoga-practice-generator) - An app in Python where users can search for Yoga poses and add them to a Yoga practice, saved to a text file.
+- [Therapy database](https://github.com/jourzy/therapy-database) - A database for a therapist, assisting with diary management and bookings, recording session notes and client data, as well as keeping track of income and expenses.
 
 In this assignment I will be using GitHub for version control, creating branches to work on adding functionality and creating pull requests so that my team can review and merge changes.
 
