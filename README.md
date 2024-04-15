@@ -152,9 +152,15 @@ In this assignment I aim to gain a better understanding of the standards and rou
 Through hands-on experience and continuous learning, I seek to refine my abilities and contribute effectively to the field of technology.
 
 **[Majella O'Mahony](https://github.com/MadgeMom)**
+I am open to work and seeking a first entry role in Software and Web Development. Currently on the Full Stack Pathway of a Nano Degree with Code First Girls.  By day I'm a Specialist Mentor for Adults in Higher Education and by night I learn code! What inspired me to learn computer languages...? I chose to specialise in ICT during my post graduate teacher training and have led the Computer Science Curriculum at KeyStage 2. I discovered that creating coding projects were the highlight of my week and a brilliant way to have a lot of fun whilst also getting creative, problem-solving and being innovative.
 
-To be provided
-
+Previous CFG Projects:
+- Designed and created an interactive web application page for an Educational Academy using HTML, CSS and Javascript
+- Created an interactive web application with a suite of interactive productivity tools using HTML, CSS and Javascript
+- Create a console app in Python to interact with an API to obtain Data and transform Data for impact
+- Designed and built a relational database, with complex queries, in-built functions, joins, stored procedures and to handle specific complex Data requirements
+  
+This project has given me the oportunity to develop and demonstrate my skills and Knowledge of Python, gain experience with web frameworks such as Flask, gain experience of front and back-end technologies using HTTP methods, familiarity with database systems such as MySQL and gain confidence in using Version Control Systems, such as Git(using terminal commands) and GitHub.  
 
 ### References
 We are grateful to the following people / organisations for their tuition, resources and guidance. Without them, this project would not be possible.
