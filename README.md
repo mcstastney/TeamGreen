@@ -58,6 +58,7 @@ Main_staff.py has been designed to be accessed directly by staff to use for busi
 
 ### Functionality of Main_Staff.py and how to use it
 When first running the Main_Staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
+![Staff portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
 
 ![Staff portal main menu screenshot](assets/images/How to use the program/Staff portal main menu screenshot.png?raw=true)
 
