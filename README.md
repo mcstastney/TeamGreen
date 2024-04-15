@@ -43,7 +43,7 @@ For future releases, we will add the following new features:
     - main_customer.py or main_staff.py
 6.	When main_customer.py or main_staff.py is running, navigate through the menu via the console.
 
-## About requirements.txt
+### About requirements.txt
 requirements.txt is a file that contains a list of packages and libraries that you'll need to work on the project. 
 For TeamGreen's project, you can run: **pip install -r requirements.txt** in your Python / VSC terminal to install all of the relevant packages from the requirements.txt file. 
 
