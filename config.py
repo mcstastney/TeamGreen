@@ -4,4 +4,4 @@ HOST = ""
 
 USER = ""
 
-PASSWORD = " "
+PASSWORD = ""

@@ -5,6 +5,7 @@ from db_utils import get_all_records, get_categories, get_products_by_cat, inser
 #   Create application
 app = Flask(__name__)
 
+# When you run app.py it creates a developer URL: http://127.0.0.1:5000 - use this to prefix all app routes
 
 #   Homepage (GET endpoint. NB: because GET is the default, don't need to specify the methods)
 @app.route("/")
@@ -42,7 +43,7 @@ def add_new_product():
     return jsonify(record)
 
 
-# (GET endpoint) used to display customer details
+# Display customer details (GET endpoint)
 @app.route ('/staff/customers')
 def show_customer_details():
     res = get_all_customer_details() # function imported from db_utils file
@@ -50,7 +51,7 @@ def show_customer_details():
 #   Add a new product to products (POST endpoint)
 
 
-# (POST endpoint) to add a customer review
+# Add a customer review (POST endpoint)
 @app.route('/addreview', methods=['POST'])
 def add_new_review():
     review = request.get_json()
@@ -59,14 +60,14 @@ def add_new_review():
     return jsonify(review)
 
 
-# (GET endpoint) used to locate customer record by email
+# Locate customer record by email (GET endpoint)
 @app.route ('/staff/customers/<email_address>')
 def get_specific_customer(email_address):
     res = get_specific_customer_detail(email_address) # function imported from db_utils file
     return jsonify(res)
 
 
-#(POST endpoint) where we will add a new customer record
+# Add a new customer record (POST endpoint)
 @app.route ('/staff/insertcustomers', methods=['POST'])
 def add_new_customer():
     record = request.get_json()
@@ -92,12 +93,3 @@ if __name__ == "__main__":
 #     insert_new_order(order)
 #     print(order)
 #     return jsonify(order)
-
-
-
-
-
-
-
-#   Reference note
-# when you run the app.py it creates a developer URL: http://127.0.0.1:5000
