@@ -38,9 +38,9 @@ For future releases, we will add the following new features:
 3.	From your Pycharm or Visual Studio Code terminal, install the project requirements by running: **pip install -r requirements.txt**
 4.	Open **config.py** and add your SQL login details.
 5.	Run the files in the following order:
-- db_utils.py
-- app.py
-- main_customer.py or main_staff.py
+    - db_utils.py
+    - app.py
+    - main_customer.py or main_staff.py
 6.	When main_customer.py or main_staff.py is running, navigate through the menu via the console.
 
 ## How to use the project
@@ -151,7 +151,7 @@ Through hands-on experience and continuous learning, I seek to refine my abiliti
 To be provided
 
 
-## References
+### References
 We are grateful to the following people / organisations for their tuition, resources and guidance. Without them, this project would not be possible.
 
 - [Code First Girls](https://codefirstgirls.com/) and the whole CFG community
@@ -161,7 +161,7 @@ We are grateful to the following people / organisations for their tuition, resou
 ## License
 [GNU General Public License v3.0](License)
 
-## Evidence of Gti and Github skills
+## Evidence of Git and Github skills
 
 ### Checking the status of a file
 
