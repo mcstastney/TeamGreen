@@ -241,8 +241,8 @@ def run():
             quit()
 
 
-# main program
+# Run main program / customer menu
 
-print("\n\t>>>\tWELCOME TO TEAM GREEN'S ONLINE SHOP!\t<<<")
-print("\n>>>\tWhen the going gets tough, the tough get growing! \t<<<")
+print("\n\t>>>\t\033[1m\U0001F33A Welcome to Team Green's Online Shop \U0001F33A\033[0m\t<<<")
+print("\n>>>\t\033[1m\U0001F331 When the going gets tough, the tough get growing! \U0001F331\033[0m\t<<<\n")
 run()

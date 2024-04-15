@@ -9,7 +9,8 @@ class DbConnectionError(Exception):
     pass
 
 
-#   Connect to database using the credentials imported from config file
+# The following code connects you to shop_online MySQL database.
+# Ensure you have entered your details in the config.py file
 def _connect_to_specific_db(database_name):
     mydb = mysql.connector.connect(
         host=HOST,
@@ -21,22 +22,6 @@ def _connect_to_specific_db(database_name):
     print("Connected to DB: %s" % db_name)
 
     return mydb
-
-
-# The following code connects you to shop_online MySQL database. 
-#Ensure you have entered your details in the config.py file
-def connect_to_db():
-    try:
-        connection = mysql.connector.connect(
-            host=HOST,
-            user=USER,
-            password=PASSWORD,
-            database='online_shop'
-        )
-        print("Connected to MySQL database")
-        return connection
-    except mysql.connector.Error as err:
-        print("Error:", err)
 
 
 # Show all tables in database
@@ -174,10 +159,10 @@ def insert_new_product(record):
     print("{} added to database".format(record['product_name']))
 
 
-# Following code allocates relevent product id to the product name entered by user
+# Following code allocates relevant product id to the product name entered by user
 def get_product_id(product_name):
     try:
-        connection = connect_to_db()
+        connection = _connect_to_specific_db(db_name)
         cursor = connection.cursor()
         sql = "SELECT product_id FROM products WHERE product_name = %s"
         cursor.execute(sql, (product_name,))
@@ -202,7 +187,7 @@ def add_review(product_name, rating, review_text):
     try:
         product_id = get_product_id(product_name)
         if product_id is not None:
-            connection = connect_to_db()
+            connection = _connect_to_specific_db(db_name)
             cursor = connection.cursor()
             sql = "INSERT INTO reviews (product_id, rating, review_text, review_date) VALUES (%s, %s, %s, NOW())"
             values = (product_id, rating, review_text)
@@ -218,10 +203,10 @@ def add_review(product_name, rating, review_text):
             print("MySQL connection is closed")
 
 
-# Following code allocates relevent product id to the product name entered by user
+# Allocates relevant product id to the product name entered by user
 def get_product_id(product_name):
     try:
-        connection = connect_to_db()
+        connection = _connect_to_specific_db(db_name)
         cursor = connection.cursor()
         sql = "SELECT product_id FROM products WHERE product_name = %s"
         cursor.execute(sql, (product_name,))
@@ -246,7 +231,7 @@ def add_review(product_name, rating, review_text):
     try:
         product_id = get_product_id(product_name)
         if product_id is not None:
-            connection = connect_to_db()
+            connection = _connect_to_specific_db(db_name)
             cursor = connection.cursor()
             sql = "INSERT INTO reviews (product_id, rating, review_text, review_date) VALUES (%s, %s, %s, NOW())"
             values = (product_id, rating, review_text)
@@ -355,14 +340,13 @@ def insert_new_customer(record):
 #get_all_records()
 #get_categories()
 #get_products_by_cat("Plant")
-#get_specific_customer("daisy@hotmail.com")
+#get_specific_customer_details("daisy@hotmail.com")
 
 
 #   Sample record for testing purposes
 # testrecord = {
-#     'product_id': 11,
 #     'product_name': 'Gooseberry bush',
-#     'product_category': 'Plant',
+#     'product_category': 1,
 #     'price': 5.00,
 #     'stock_quantity': 35}
 # insert_new_product(testrecord)
