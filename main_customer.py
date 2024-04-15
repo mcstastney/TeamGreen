@@ -12,7 +12,7 @@ def get_products():
     return result.json()
 
 
-# Get categories
+# Get categories of products
 def get_categories():
     result = requests.get(
         'http://127.0.0.1:5000/categories',
@@ -37,13 +37,11 @@ def add_review(product_name, rating, review_text):
         "rating": rating,
         "review_text": review_text
     }
-
     result = requests.post(
         'http://127.0.0.1:5000/addreview',
         headers={'content-type': 'application/json'},
         data=json.dumps(review)
     )
-
     return result.json()
 
 
@@ -109,26 +107,13 @@ def display_categories(items):
         "\nEnter the code to select a category: ", end="")
     selection = is_number()
     if selection == 0:
-        # bit of a problem here instead of going straight back to main menu shows blank products page
-        # Need to sort this out on next iteration!!!
         pass
     else:
-        # may need to add a selection statement to check if user has entered a valid number to avoid program crashing
         for item in items:
             if item[0] == selection:
                 category = item[1]
                 break
         return category
-            
-
-
-    # def make_purchase():
-        # check if item is in basket and if not tell user basket is empty
-        # display basket
-        # edit basket (select code to edit item)
-        # delete item or change quantity
-        # book delivery slot (could give options pick up in store or deliver)
-        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT)
 
 
 # a helper function to make a new list with all the unique values
@@ -161,6 +146,7 @@ def display_basket(items):
         else:
             # run function here
             print("Your order has been processed\n")
+            basket = []
     else:
         print("\nYour shopping basket is empty!\n")
 
@@ -223,7 +209,7 @@ def run():
                 else:
                     go_back = True
         elif selection == 3:
-            print("In development - Coming soon!!!")
+            print("\nIn development - Coming soon!!!\n")
             pass
         elif selection == 4:
             unique_basket = get_unique_list(basket)
@@ -246,3 +232,17 @@ def run():
 print("\n\t>>>\tWELCOME TO TEAM GREEN'S ONLINE SHOP!\t<<<")
 print("\n>>>\tWhen the going gets tough, the tough get growing! \t<<<")
 run()
+
+
+
+
+# development notes
+
+
+    # def make_purchase():
+        # check if item is in basket and if not tell user basket is empty
+        # display basket
+        # edit basket (select code to edit item)
+        # delete item or change quantity
+        # book delivery slot (could give options pick up in store or deliver)
+        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT)
