@@ -53,12 +53,12 @@ Main_staff.py has been designed to be accessed directly by staff to use for busi
 ### Functionality of Main_Staff.py and how to use it
 When first running the Main_Staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
 
-![Staff portal main menu screenshot](assets/images/How to use the program/Staff portal main menu screenshot.png)
+![Staff portal main menu screenshot](assets/images/How to use the program/Staff portal main menu screenshot.png?raw=true)
 
 ### Search all customer records
 By selecting option 1 the user can view all customer records:
 
-![Staff portal view all customer records screenshot](assets/images/How to use the program/Staff portal view all customer records screenshot.png)
+![Staff portal view all customer records screenshot](assets/images/How to use the program/Staff portal view all customer records screenshot.png?raw=true)
 
 The records displayed are taken directly from the Garden Centre mySQL database ‘online_shop’  (the main python files work in conjunction with the db_utils file and config file to connect to and access the database directly).  
 
@@ -69,7 +69,7 @@ Staff members can easily and clearly view all customer records for any purpose s
 ### Search for customer by email address
 Staff can search for an individual customer using their email address by selecting option 2 from the menu:
 
-![Staff portal search for customer using email address screenshot](assets/images/How to use the program/Staff portal search for customer using email address screenshot.png)
+![Staff portal search for customer using email address screenshot](assets/images/How to use the program/Staff portal search for customer using email address screenshot.png?raw=true)
 
 The entire customer record is displayed once the customer is located.
 
@@ -80,11 +80,11 @@ By selecting option 3 the user will then be asked for several inputs needed to p
 
 Once the final input is made, confirmation is made clear to the user through a statement displayed:
 
-![Staff portal confirmation of new customer entry screenshot](assets/images/How to use the program/Staff portal confirmation of new customer entry screenshot.png)
+![Staff portal confirmation of new customer entry screenshot](assets/images/How to use the program/Staff portal confirmation of new customer entry screenshot.png?raw=true)
 
 To check that the customers details have been added to the database, option 1 can be selected again to view the all customer records to check the addition has been made – this is not necessary but can be reassuring for the staff member to check.
 
-![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png)
+![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png?raw=true)
 (Added record is highlighted with yellow line)
 
 ### Adding product records to the database
@@ -94,12 +94,12 @@ By selecting option 4, the user will then be asked for several inputs needed to 
 
 Once the final input is made, confirmation is made clear to the user through a statement displayed:
 
-![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png)
+![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png?raw=true)
 
 ### Quit the Main_Staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
-![Staff portal confirmation of new product entry screenshot](aassets/images/How to use the program/Staff portal confirmation of new product entry screenshot.png)
+![Staff portal confirmation of new product entry screenshot](aassets/images/How to use the program/Staff portal confirmation of new product entry screenshot.png?raw=true)
 
 ### Functionality of Main_Customer.py and how to use it
 To be added
