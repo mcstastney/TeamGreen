@@ -60,10 +60,10 @@ Main_staff.py has been designed to be accessed directly by staff to use for busi
 When first running the Main_Staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
 ![Staff portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
 
-![Staff portal main menu screenshot](assets/images/How to use the program/Staff portal main menu screenshot.png?raw=true)
-
 ### Search all customer records
 By selecting option 1 the user can view all customer records:
+
+![Staff portal view all customer records screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/ff5d5fc0-6229-47b6-a184-6e61d4d606de)
 
 ![Staff portal view all customer records screenshot](assets/images/How to use the program/Staff portal view all customer records screenshot.png?raw=true)
 
