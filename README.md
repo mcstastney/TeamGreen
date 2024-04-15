@@ -9,7 +9,6 @@ Garden centre staff can use the API to add and update stock, and to access and a
 The API allows the following transactions:
 - Customers can view all products available.
 - Customers can search products by category.
-- Customers can add products to a shopping basket.
 - Customers can add reviews to products.
 - Staff can add new products to the stocklist.
 - Staff can add customers to the database.
@@ -24,8 +23,9 @@ The API allows the following transactions:
 
 ### Future updates
 For future releases, we will add the following new features:
-- Customers can view items in shopping basket and total cost.
-- Customers can delete their account details.
+- Login and authentication.
+- Customers can purchase items through the app.
+- Customers can delete or modify their account details.
 - Customers can search by review rating.
 - Customers can search for specific products.
 - Customers can book delivery dates and times.
@@ -57,6 +57,7 @@ Main_customer.py has been designed to be accessed directly by customers to use f
 Main_staff.py has been designed to be accessed directly by staff to use for business administration purposes. 
 
 ### Functionality of Main_Staff.py and how to use it
+
 When first running the Main_Staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
 ![Staff portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
 
@@ -109,10 +110,27 @@ Finally, the menu option zero allows the user to quit the program:
 
 
 ### Functionality of Main_Customer.py and how to use it
-To be added
 
-### Summary of structure and design principles
-To be added
+As with staff, when first running the Main_Customer.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number.
+
+![Customer portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
+
+The first option is to view all products. This will display all the products in a user friendly format.
+The user can then make a selection. Choosing to add a product to their basket by inputting the product code.
+Then the user is prompted to input the quantity of the item they want to buy and their shopping basket is updated and displayed. The user can do this as many times as they want until they press 0 to return to the main menu.
+
+
+
+There is also an option for the user to shop by product category. They select the product category they wish to view and then are taken to a products page showing only the required products.
+
+Once the user has finished shopping they have more options. They can view their basket. This shows each item ordered and how many they have ordered. In further iterations, the screen will show the total cost for each product and the overal cost to help the user with their purchase.
+
+There is also an option for the user to add a review.
+
+In further iterations of the app, users will be able to search for products by entering the name or part of the name.
+
+If they decide not to procede with their shopping, the user can quit the program. 
+
 
 ## Credits
 ### TeamGreen members
@@ -189,7 +207,7 @@ We are grateful to the following people / organisations for their tuition, resou
 ![Screenshot of confirmation branch was created](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
 
 
-### Adding files a branch
+### Adding files to a branch
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
 

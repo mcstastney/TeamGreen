@@ -119,16 +119,6 @@ def display_categories(items):
                 category = item[1]
                 break
         return category
-            
-
-
-    # def make_purchase():
-        # check if item is in basket and if not tell user basket is empty
-        # display basket
-        # edit basket (select code to edit item)
-        # delete item or change quantity
-        # book delivery slot (could give options pick up in store or deliver)
-        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT)
 
 
 # a helper function to make a new list with all the unique values
@@ -161,6 +151,7 @@ def display_basket(items):
         else:
             # run function here
             print("Your order has been processed\n")
+            basket = []
     else:
         print("\nYour shopping basket is empty!\n")
 
@@ -223,7 +214,7 @@ def run():
                 else:
                     go_back = True
         elif selection == 3:
-            print("In development - Coming soon!!!")
+            print("\nIn development - Coming soon!!!\n")
             pass
         elif selection == 4:
             unique_basket = get_unique_list(basket)
@@ -246,3 +237,18 @@ def run():
 print("\n\t>>>\tWELCOME TO TEAM GREEN'S ONLINE SHOP!\t<<<")
 print("\n>>>\tWhen the going gets tough, the tough get growing! \t<<<")
 run()
+
+
+
+
+
+# development notes
+
+
+    # def make_purchase():
+        # check if item is in basket and if not tell user basket is empty
+        # display basket
+        # edit basket (select code to edit item)
+        # delete item or change quantity
+        # book delivery slot (could give options pick up in store or deliver)
+        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT)
