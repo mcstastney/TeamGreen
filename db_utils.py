@@ -1,13 +1,15 @@
 import mysql.connector
+from datetime import datetime
 from config import HOST, USER, PASSWORD
 
 db_name = "online_shop"
 
+# creating an exception class called DbConnectionError
 class DbConnectionError(Exception):
     pass
 
-#   Connect to database using the credentials imported from config file
 
+#   Connect to database using the credentials imported from config file
 def _connect_to_specific_db(database_name):
     mydb = mysql.connector.connect(
         host=HOST,
@@ -20,7 +22,6 @@ def _connect_to_specific_db(database_name):
 
     return mydb
 
-_connect_to_specific_db(db_name)
 
 # The following code connects you to shop_online MySQL database. 
 #Ensure you have entered your details in the config.py file
@@ -37,8 +38,8 @@ def connect_to_db():
     except mysql.connector.Error as err:
         print("Error:", err)
 
-# Show all tables in database
 
+# Show all tables in database
 def _show_all_table_in_specific_db(database_name):
     specific_db = _connect_to_specific_db(database_name)
     mycursor = specific_db.cursor()
@@ -47,12 +48,8 @@ def _show_all_table_in_specific_db(database_name):
     for x in mycursor:
         print(x)
 
-_show_all_table_in_specific_db(db_name)
-
-
 
 #   Select all records in the 'products' table in the 'online_shop' DB
-
 def get_all_records():
     try:
         #   Connect to DB
@@ -87,6 +84,8 @@ def get_all_records():
             db_connection.close()
             print("DB connection is closed")
 
+
+# a function get the different categories of products from the database
 def get_categories():
     try:
         db_name = "online_shop"
@@ -112,6 +111,8 @@ def get_categories():
             db_connection.close()
             print("DB connection is closed")
 
+
+# a function to get all products in a specific category
 def get_products_by_cat(category):
     try:
         db_name = "online_shop"
@@ -141,6 +142,7 @@ def get_products_by_cat(category):
             print("DB connection is closed")
 
 
+# a function to add a new product to the database
 def insert_new_product(record):
     try:
         #  connect to db
@@ -193,6 +195,7 @@ def get_product_id(product_name):
             connection.close()
             print("MySQL connection is closed")
 
+
 # Adds a new review to the 'reviews' table once user has completed their answers
 # Adds time stamp of the date user adds the review
 def add_review(product_name, rating, review_text):
@@ -236,6 +239,7 @@ def get_product_id(product_name):
             connection.close()
             print("MySQL connection is closed")
 
+
 # Adds a new review to the 'reviews' table once user has completed their answers
 # Adds time stamp of the date user adds the review
 def add_review(product_name, rating, review_text):
@@ -258,6 +262,7 @@ def add_review(product_name, rating, review_text):
             print("MySQL connection is closed")
 
 
+#this function is used to obtain all customer records
 def get_all_customer_details():
     try:
             #connect to db
@@ -280,7 +285,8 @@ def get_all_customer_details():
                 db_connection.close()
                 print("DB connection is closed")
 
-#this function is used to obtain all customer records
+
+#this function is used to obtain the record of a specific customer
 def get_specific_customer_detail(email_address):
     try:
         db_name = "online_shop"
@@ -307,6 +313,8 @@ def get_specific_customer_detail(email_address):
             db_connection.close()
             print("DB connection is closed")
 
+
+# a function to add a new customer record to the database
 def insert_new_customer(record):
     try:
         #  connect to db
@@ -340,6 +348,16 @@ def insert_new_customer(record):
 
     print("{} added to database".format(record['email_address']))
 
+
+# Testing the functions work as intended
+# _connect_to_specific_db(db_name)
+# _show_all_table_in_specific_db(db_name)
+#get_all_records()
+#get_categories()
+#get_products_by_cat("Plant")
+#get_specific_customer("daisy@hotmail.com")
+
+
 #   Sample record for testing purposes
 # testrecord = {
 #     'product_id': 11,
@@ -349,8 +367,3 @@ def insert_new_customer(record):
 #     'stock_quantity': 35}
 # insert_new_product(testrecord)
 
-#get_all_records()
-#get_categories()
-#get_products_by_cat("Plant")
-
-#get_specific_customer("daisy@hotmail.com")
