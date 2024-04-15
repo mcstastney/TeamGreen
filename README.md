@@ -27,9 +27,11 @@ For future releases, we will add the following new features:
 - Customers can view items in shopping basket and total cost.
 - Customers can delete their account details.
 - Customers can search by review rating.
-- Customers can search for specific products. 
+- Customers can search for specific products.
+- Customers can book delivery dates and times.
 - Staff can delete discontinued products from stocklist.
-- Staff can remove customer details for GDPR purposes. 
+- Staff can remove customer details for GDPR purposes.
+- Staff can view delivery schedule.
 - Options for users to undo / edit actions.
 
 ## How to install and run the project
