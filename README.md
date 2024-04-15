@@ -65,8 +65,6 @@ By selecting option 1 the user can view all customer records:
 
 ![Staff portal view all customer records screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/ff5d5fc0-6229-47b6-a184-6e61d4d606de)
 
-![Staff portal view all customer records screenshot](assets/images/How to use the program/Staff portal view all customer records screenshot.png?raw=true)
-
 The records displayed are taken directly from the Garden Centre mySQL database ‘online_shop’  (the main python files work in conjunction with the db_utils file and config file to connect to and access the database directly).  
 
 The customer details when retrieved in the terminal are displayed in a table format.  There are functions to determine how information from the database is presented.  
@@ -76,7 +74,7 @@ Staff members can easily and clearly view all customer records for any purpose s
 ### Search for customer by email address
 Staff can search for an individual customer using their email address by selecting option 2 from the menu:
 
-![Staff portal search for customer using email address screenshot](assets/images/How to use the program/Staff portal search for customer using email address screenshot.png?raw=true)
+![Staff portal search for customer using email address screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/9707ed77-c546-4f2f-93cf-a58e5dab9558)
 
 The entire customer record is displayed once the customer is located.
 
@@ -87,11 +85,12 @@ By selecting option 3 the user will then be asked for several inputs needed to p
 
 Once the final input is made, confirmation is made clear to the user through a statement displayed:
 
-![Staff portal confirmation of new customer entry screenshot](assets/images/How to use the program/Staff portal confirmation of new customer entry screenshot.png?raw=true)
+![Staff portal confirmation of new customer entry screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/1c73d779-5295-4d75-9094-eb6531d5df49)
 
 To check that the customers details have been added to the database, option 1 can be selected again to view the all customer records to check the addition has been made – this is not necessary but can be reassuring for the staff member to check.
 
-![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png?raw=true)
+![Staff portal show customer table with new record screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/89281055-c216-4591-b8d2-e7c0d99cf8af)
+
 (Added record is highlighted with yellow line)
 
 ### Adding product records to the database
@@ -101,12 +100,13 @@ By selecting option 4, the user will then be asked for several inputs needed to 
 
 Once the final input is made, confirmation is made clear to the user through a statement displayed:
 
-![Staff portal show customer table with new record screenshot](assets/images/How to use the program/Staff portal show customer table with new record screenshot.png?raw=true)
+![Staff portal show customer table with new record screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/037709f6-a2c0-4814-b1e8-836513eb7362)
 
 ### Quit the Main_Staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
-[!Staff portal confirmation of new product entry screenshot](assets/images/How to use the program/Staff portal confirmation of new product entry screenshot.png?raw=true)
+![Staff portal confirmation of new product entry screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/6aca3d93-716a-455c-80c9-579995b55d72)
+
 
 ### Functionality of Main_Customer.py and how to use it
 To be added
