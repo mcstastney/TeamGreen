@@ -224,6 +224,7 @@ We are grateful to the following people / organisations for their tuition, resou
 [GNU General Public License v3.0](License)
 
 ## Evidence of Git and Github skills
+(**Note:** Our project was initially called TeamElemella and changed to TeamGreen at a later date, so some screenshots are to different repos.)
 
 ### Checking the status of a file
 
