@@ -265,7 +265,7 @@ We are grateful to the following people / organisations for their tuition, resou
 ![Screenshot showing an open pull request.](/assets/images/pull_request3.png?raw=true)
 
 #### Pull request in git to local repo
-[Screenshot of git pull in local repo](assets/images/TeamGreen-git-pull.png)
+![Screenshot of git pull in local repo](assets/images/TeamGreen-git-pull.png)
 
 
 ### Merging and deploying to main branch
