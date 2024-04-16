@@ -59,7 +59,7 @@ main_staff.py has been designed to be accessed directly by staff to use for busi
 ### Summary of design principles and testing
 
 Both apps were designed for ease of use and to provide the user with a consistent and user friendly interface. Users are able to navigate through the menu options by selecting the appropriate number. Returning back to the main screen and the quitting the program is always 0.
-Testing has allowed us to improve the user experience. For example if a user tries to make a pruchase with nothing in their basket, they are now informed that their basket is empty instead of see a screen with no items on it.
+Testing has allowed us to improve the user experience. For example if a user tries to make a purchase with nothing in their basket, they are now informed that their basket is empty instead of seeing a screen with no items on it.
 
 ### Functionality of main_staff.py and how to use it
 
