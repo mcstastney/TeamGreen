@@ -155,7 +155,7 @@ There is also an option for the user to add a review.
 
 In further iterations of the app, users will be able to search for products by entering the name or part of the name.
 
-![Under development screenshot](/assets/images//search_specific_product.png?raw=true)
+![Under development screenshot](/assets/images/search_specific_product.png?raw=true)
 
 If they decide not to proceed with their shopping, the user can quit the program. 
 
