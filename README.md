@@ -108,6 +108,11 @@ Once the final input is made, confirmation is made clear to the user through a s
 
 ![Staff portal show customer table with new record screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/037709f6-a2c0-4814-b1e8-836513eb7362)
 
+#### Adding product records to the database
+When running main_staff.py, a menu with numbered options prompts users to choose by inputting a number. If they select option 5, they can add a product review.
+
+After selecting option 5, the client can choose to add a review by selecting "yes" or decline by clicking "no." If they proceed, they'll need to input the product ID, rate the product between 1-5, and provide a written review. This information will then be added into the SQL database reviews table.
+
 #### Quit the main_staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
