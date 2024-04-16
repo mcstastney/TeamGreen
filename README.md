@@ -244,7 +244,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
 
-<img width="603" alt="TeamGreen git branch, commit, push" src="https://github.com/mcstastney/TeamGreen/assets/59793847/9b72eacf-a65a-4341-a24f-9a7233b9916e">
+[Screenshot of git adding files to branch](assets/images/TeamGreen-git-add-files.png)
 
 
 ### Adding commits with meaningful messages
@@ -253,7 +253,8 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a commit with a meaningful message](https://github.com/mcstastney/TeamGreen/assets/136608321/c2a0a087-a5b6-4392-9073-73eba853e273)
 
-NEED TO ADD AT LEAST ONE MORE HERE AS SAYS COMMITS PLURAL!!!!
+[Screenshot of git commit with msg](assets/images/TeamGreen-git-commit-with-msg.png)
+
 
 ### Opening a pull request
 
@@ -261,6 +262,16 @@ NEED TO ADD AT LEAST ONE MORE HERE AS SAYS COMMITS PLURAL!!!!
 
 ![Screenshot showing an open pull request.](/assets/images/pull_request3.png?raw=true)
 
+#### Pull request in git to local repo
+[Screenshot of git pull in local repo](assets/images/TeamGreen-git-pull.png)
+
+
 ### Merging and deploying to main branch
 
-![Screenshot of a pull request being accepted and files deployed to main branch.](/assets/images/?????.png?raw=true)
+[Screenshot of Github open pull request](assets/images/TeamGreen-github-open-pull-request.png)
+
+[Screenshot of Github compare branches](assets/images/TeamGreen-github-open-pull-request.png)
+
+[Screenshot of Github merge branches](assets/images/TeamGreen-github-merge-pull-request.png)
+
+[Screenshot of Github confirm merge](assets/images/TeamGreen-github-confirm-merge-pull-request.png)
