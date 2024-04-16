@@ -232,6 +232,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a git status showing a file that has been modified](https://github.com/mcstastney/TeamGreen/assets/136608321/5a316040-e652-4a7b-b12e-c22c482b9187)
 
+[Screenshot of git status](assets/images/TeamGreen-git-status.png)
 
 ### Creating a branch
 
@@ -239,6 +240,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of confirmation branch was created](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
 
+[Screenshot of git create branch](assets/images/TeamGreen-git-create-branch.png)
 
 ### Adding files to a branch
 
