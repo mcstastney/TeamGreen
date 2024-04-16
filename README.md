@@ -243,8 +243,8 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
 
+<img width="603" alt="TeamGreen git branch, commit, push" src="https://github.com/mcstastney/TeamGreen/assets/59793847/9b72eacf-a65a-4341-a24f-9a7233b9916e">
 
-NEED TO ADD AT LEAST ONE MORE HERE AS SAYS FILES PLURAL!!!!
 
 ### Adding commits with meaningful messages
 
