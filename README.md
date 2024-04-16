@@ -56,12 +56,17 @@ main_customer.py has been designed to be accessed directly by customers to use f
 
 main_staff.py has been designed to be accessed directly by staff to use for business administration purposes. 
 
+### Summary of design principles and testing
+
+Both apps were designed for ease of use and to provide the user with a consistent and user friendly interface. Users are able to navigate through the menu options by selecting the appropriate number. Returning back to the main screen and the quitting the program is always 0.
+Testing has allowed us to improve the user experience. For example if a user tries to make a pruchase with nothing in their basket, they are now informed that their basket is empty instead of see a screen with no items on it.
+
 ### Functionality of main_staff.py and how to use it
 
 When first running the main_staff.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number
 ![Staff portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/e01772db-2ce5-4f25-9d9d-859f311c8741)
 
-### Search all customer records
+#### Search all customer records
 By selecting option 1 the user can view all customer records:
 
 ![Staff portal view all customer records screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/ff5d5fc0-6229-47b6-a184-6e61d4d606de)
@@ -72,14 +77,14 @@ The customer details when retrieved in the terminal are displayed in a table for
 
 Staff members can easily and clearly view all customer records for any purpose such as marketing, future contact or promotional selling.  
 
-### Search for customer by email address
+#### Search for customer by email address
 Staff can search for an individual customer using their email address by selecting option 2 from the menu:
 
 ![Staff portal search for customer using email address screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/9707ed77-c546-4f2f-93cf-a58e5dab9558)
 
 The entire customer record is displayed once the customer is located.
 
-### Add customer records to the database
+#### Add customer records to the database
 The API interface using the terminal is a quick and easy way for staff to be able to update customer records.  Option 3 on the menu allows the user to add customer records to the database ‘online_shop’.
 
 By selecting option 3 the user will then be asked for several inputs needed to populate the customer record completely. The user inputs match the column headers of the table ‘customers’ within the database ‘online _shop’. The customer_ID column uses auto-increment in the SQL database so the user doesn’t have to input this. 
@@ -94,7 +99,7 @@ To check that the customers details have been added to the database, option 1 ca
 
 (Added record is highlighted with yellow line)
 
-### Adding product records to the database
+#### Adding product records to the database
 The API interface using the terminal is a quick way for staff to update product records; this is important for managing stock levels. Option 4 allows the user to add product records to the database ‘online_shop’.
 
 By selecting option 4, the user will then be asked for several inputs needed to populate the product record completely.  The user inputs match the column headers of the table ‘products’ within the database ‘online _shop’.  The product_ID column uses auto-increment in the SQL database so the user doesn’t have to input this.
@@ -103,7 +108,7 @@ Once the final input is made, confirmation is made clear to the user through a s
 
 ![Staff portal show customer table with new record screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/037709f6-a2c0-4814-b1e8-836513eb7362)
 
-### Quit the main_staff program at anytime	
+#### Quit the main_staff program at anytime	
 Finally, the menu option zero allows the user to quit the program:
 
 ![Staff portal confirmation of new product entry screenshot](https://github.com/mcstastney/TeamGreen/assets/136608321/6aca3d93-716a-455c-80c9-579995b55d72)
@@ -115,6 +120,8 @@ As with staff, when first running the main_customer.py file the terminal will di
 
 ![Customer portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/cust_main_menu.png)
 
+#### View all products
+
 The first option is to view all products. This will display all the products in a user friendly format.
 The user can then add a product to their basket by inputting the product code.
 
@@ -124,11 +131,15 @@ Then the user is prompted to input the quantity of the item they want to buy and
 
 ![Add product screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/add_product.png)
 
+#### Find products by category
+
 There is also an option for the user to shop by product category. They select the product category they wish to view and then are taken to a products page showing only the required products.
 
 ![Choose category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/choose_category.png)
 
 ![Products by category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/products_by_category.png)
+
+#### Make purchase
 
 The user can also view their basket. This shows each item ordered and how many they have ordered. In further iterations, the screen will show the total cost for each product and the overal cost to help the user with their purchase.
 
@@ -136,7 +147,11 @@ The user can also view their basket. This shows each item ordered and how many t
 
 ![Make purchase screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/make_purchase.png)
 
+#### Leave a review
+
 There is also an option for the user to add a review.
+
+#### Under development
 
 In further iterations of the app, users will be able to search for products by entering the name or part of the name.
 
@@ -222,6 +237,7 @@ We are grateful to the following people / organisations for their tuition, resou
 ### Adding files to a branch
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
+
 
 NEED TO ADD AT LEAST ONE MORE HERE AS SAYS FILES PLURAL!!!!
 
