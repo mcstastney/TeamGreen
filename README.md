@@ -118,24 +118,24 @@ Finally, the menu option zero allows the user to quit the program:
 
 As with staff, when first running the main_customer.py file the terminal will display a menu of numbered options prompting the user to interact by making a choice and inputting a number.
 
-![Customer portal main menu screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/cust_main_menu.png)
+![Customer portal main menu screenshot](assets/images/How to use the program/cust_main_menu.png)
 
 #### View all products
 
 The first option is to view all products. This will display all the products in a user friendly format.
 The user can then add a product to their basket by inputting the product code.
 
-![All products screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/all_products.png)
+![All products screenshot](assets/images/How to use the program/all_products.png)
 
 Then the user is prompted to input the quantity of the item they want to buy and their shopping basket is updated and displayed. The user can do this as many times as they want until they press 0 to return to the main menu.
 
-![Add product screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/add_product.png)
+![Add product screenshot](assets/images/How to use the program/add_product.png)
 
 #### Find products by category
 
 There is also an option for the user to shop by product category. They select the product category they wish to view and then are taken to a products page showing only the required products.
 
-![Choose category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/choose_category.png)
+![Choose category screenshot](assets/images/How to use the program/choose_category.png)
 
 ![Products by category screenshot](https://github.com/mcstastney/TeamGreen/assets/How to use the program/products_by_category.png)
 
