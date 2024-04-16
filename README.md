@@ -232,7 +232,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a git status showing a file that has been modified](https://github.com/mcstastney/TeamGreen/assets/136608321/5a316040-e652-4a7b-b12e-c22c482b9187)
 
-[Screenshot of git status](assets/images/TeamGreen-git-status.png)
+![Screenshot of git status](assets/images/TeamGreen-git-status.png)
 
 ### Creating a branch
 
@@ -240,13 +240,13 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of confirmation branch was created](https://github.com/mcstastney/TeamGreen/assets/136608321/94342215-2f4b-44fc-a425-0eda93016383)
 
-[Screenshot of git create branch](assets/images/TeamGreen-git-create-branch.png)
+![Screenshot of git create branch](assets/images/TeamGreen-git-create-branch.png)
 
 ### Adding files to a branch
 
 ![Screenshot of a file being added to a branch.](/assets/images/add_file_branch1.png?raw=true)
 
-[Screenshot of git adding files to branch](assets/images/TeamGreen-git-add-files.png)
+![Screenshot of git adding files to branch](assets/images/TeamGreen-git-add-files.png)
 
 
 ### Adding commits with meaningful messages
@@ -255,7 +255,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of a commit with a meaningful message](https://github.com/mcstastney/TeamGreen/assets/136608321/c2a0a087-a5b6-4392-9073-73eba853e273)
 
-[Screenshot of git commit with msg](assets/images/TeamGreen-git-commit-with-msg.png)
+![Screenshot of git commit with msg](assets/images/TeamGreen-git-commit-with-msg.png)
 
 
 ### Opening a pull request
@@ -270,10 +270,10 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ### Merging and deploying to main branch
 
-[Screenshot of Github open pull request](assets/images/TeamGreen-github-open-pull-request.png)
+![Screenshot of Github open pull request](assets/images/TeamGreen-github-open-pull-request.png)
 
-[Screenshot of Github compare branches](assets/images/TeamGreen-github-open-pull-request.png)
+![Screenshot of Github compare branches](assets/images/TeamGreen-github-open-pull-request.png)
 
-[Screenshot of Github merge branches](assets/images/TeamGreen-github-merge-pull-request.png)
+![Screenshot of Github merge branches](assets/images/TeamGreen-github-merge-pull-request.png)
 
-[Screenshot of Github confirm merge](assets/images/TeamGreen-github-confirm-merge-pull-request.png)
+![Screenshot of Github confirm merge](assets/images/TeamGreen-github-confirm-merge-pull-request.png)
