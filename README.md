@@ -162,6 +162,8 @@ After selecting option 5, the customer can choose to add a review by selecting "
 
 If they proceed, they'll need to input the product ID, rate the product between 1-5, and provide a written review. 
 
+![Screenshot of review function](assets/images/add-review.png)
+
 This information will then be stored in the SQL database of reviews.
 
 #### Under development
