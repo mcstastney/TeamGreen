@@ -154,7 +154,15 @@ The user can also view their basket. This shows each item ordered and how many t
 
 #### Leave a review
 
-There is also an option for the user to add a review.
+There is also an option for the customer to add a review.
+
+When running main_customer.py, a menu with numbered options prompts users to choose by inputting a number. If they select option 5, they can add a product review.
+
+After selecting option 5, the customer can choose to add a review by selecting "yes" or decline by clicking "no." 
+
+If they proceed, they'll need to input the product ID, rate the product between 1-5, and provide a written review. 
+
+This information will then be stored in the SQL database of reviews.
 
 #### Under development
 
@@ -272,7 +280,7 @@ We are grateful to the following people / organisations for their tuition, resou
 
 ![Screenshot of Github open pull request](assets/images/TeamGreen-github-open-pull-request.png)
 
-![Screenshot of Github compare branches](assets/images/TeamGreen-github-open-pull-request.png)
+![Screenshot of Github compare branches](assets/images/TeamGreen-github-compare-branches.png)
 
 ![Screenshot of Github merge branches](assets/images/TeamGreen-github-merge-pull-request.png)
 
