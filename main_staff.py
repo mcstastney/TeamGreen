@@ -91,7 +91,7 @@ def add_to_customer(first_name, last_name, email_address, address1, address2, po
 
 #really important the RUN function is placed at the end of the other functions it will call.
 def main_menu_staff():
-    msg = ("1: View all customer records\n"
+    msg = ("\n1: View all customer records\n"
            "2: Search for customer by email address\n"
            "3: Add new customer to records\n"
            "4: Add new product to stock\n"
@@ -129,7 +129,7 @@ def run():
             add_to_stock(prod_name, prod_category, prod_price, prod_qty)
             print("\n\033[1m{} has been added to the database.\033[0m\n".format(prod_name))
         elif option == 0:
-                print("Your work is always appreciated.\nGoodbye!")
+                print("\nYour work is always appreciated.\nGoodbye!")
                 quit()
         else:
             print("\nPlease enter a valid number.\n")

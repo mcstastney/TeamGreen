@@ -186,7 +186,7 @@ def add_review(review):
             db_connection.close()
             print("DB connection is closed")
 
-    print("Review for {} added to database".format(review['product_id']))
+    print("Review for product ID: {} added to database".format(review['product_id']))
 
 
 # Get all customer records
@@ -297,8 +297,8 @@ def insert_new_customer(record):
 
 # testreview = {
 #     'product_id': 10,
-#     'rating': 1,
-#     'review_text': 'This manure is crap!'}
+#     'rating': 5,
+#     'review_text': 'Great compost for germinating seedings.'}
 # add_review(testreview)
 
 # IF TIME - get timestamp working in add_review

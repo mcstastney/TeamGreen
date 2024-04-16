@@ -82,32 +82,12 @@ CREATE TABLE reviews (
     CONSTRAINT fk_review_product_id FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
 
-INSERT INTO reviews (product_id, rating, review_text, review_date)
+INSERT INTO reviews (product_id, rating, review_text)
 VALUES
-    (1, 4, "Beautiful flowers", "2019-06-20 14:45:00"),
-    (2, 5, "My grass looks amazing!", "2021-08-02 09:30:00"),
-    (3, 3, "Trays could be sturdier.", "2021-04-18 12:20:00"),
-    (4, 5, "Very happy with my purchase.", "2021-07-15 08:10:00"),
-    (5, 4, "A lovely plant.", "2021-07-15 08:10:00");
+    (1, 4, "Beautiful flowers"),
+    (2, 5, "My grass looks amazing!"),
+    (3, 3, "Trays could be sturdier."),
+    (4, 5, "Very happy with my purchase."),
+    (5, 4, "A lovely plant.");
     
 SELECT * FROM reviews;
-
-CREATE TABLE orders (
-		customer_id INTEGER,
-		order_id INTEGER UNIQUE,
-		order_date DATE, 
-		order_time TIME,
-		CONSTRAINT pk_order_id PRIMARY KEY (order_id),
-		CONSTRAINT fk_customer_id FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
-);
- 
-CREATE TABLE shopping_basket (
-		order_id INTEGER NOT NULL,
-		product_id INTEGER NOT NULL,
-		quantity INTEGER NOT NULL,
-		CONSTRAINT fk_product_id FOREIGN KEY (product_id) REFERENCES products(product_id),
-		CONSTRAINT fk_order_id FOREIGN KEY (order_id) REFERENCES orders(order_id)
-);
-
-
-

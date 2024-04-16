@@ -1,7 +1,7 @@
 import requests
 import json
 
-# functions interacting with the API
+# Function to interact with the API
 
 # Show all products
 def get_products():
@@ -12,7 +12,7 @@ def get_products():
     return result.json()
 
 
-# Get categories of products
+# Get product categories
 def get_categories():
     result = requests.get(
         'http://127.0.0.1:5000/categories',
@@ -30,24 +30,25 @@ def get_products_by_category(category):
     return result.json()
 
 
-# Posting a user review
-def add_review(product_name, rating, review_text):
+# Post a user review
+def add_customer_review(product_id, rating, review_text):
     review = {
-        "product_name": product_name,
+        "product_id": product_id,
         "rating": rating,
         "review_text": review_text
     }
+
     result = requests.post(
         'http://127.0.0.1:5000/addreview',
         headers={'content-type': 'application/json'},
         data=json.dumps(review)
     )
-    return result.json()
 
+    return result.json()
 
 # Helper functions for the main program
 
-# a function to check if string input is a number and convert to integer data type
+# Check if string input is a number and convert to integer data type
 def is_number(msg=""):
     while True:
         print(msg, end="")
@@ -60,7 +61,7 @@ def is_number(msg=""):
             print("Invalid selection.\n")
 
 
-# display the products in a user friendly way and returns item selected by the user
+# Display the products in a user-friendly way and return item selected by the user
 def display_products(items):
     if items:
         # Print the names of the columns with spacing.
@@ -87,14 +88,14 @@ def display_products(items):
         pass
 
 
-# find out how many of each item the user wants
+# Find out how many of each item the user wants
 def get_quantity():
     print("Enter quantity required: ", end="")
     how_many = is_number()
     return how_many
 
 
-# display the product categories on the screen in a user friendly format
+# Display the product categories on the screen in a user-friendly format
 def display_categories(items):
     # output headings
     print("\n{:<4} {:<40}".format('CODE', 'PRODUCT CATEGORY'))
@@ -116,14 +117,14 @@ def display_categories(items):
         return category
 
 
-# a helper function to make a new list with all the unique values
+# Helper function to make a new list with all the unique values
 def get_unique_list(list):
     unique_list = []
     [unique_list.append(item) for item in list if item not in unique_list]
     return unique_list
 
 
-# displays the basket of products
+# Displays the basket of products
 def display_basket(items):
     if items:
         print("\n\t\tSHOPPING BASKET\n")
@@ -152,16 +153,17 @@ def display_basket(items):
 
 
 # Ask user if they want to add a review
-#If no then user can continue shopping
-#if yes then user can write a review
+# If no then user can continue shopping
+# If yes then user can write a review
 def ask_for_review():
     while True:
         choice = input("Do you want to add a review? (yes/no): ").lower().capitalize()
         if choice == 'Yes':
-            product_name = input("Enter the product name: ").capitalize()
+            product_id = int(input("Enter the product ID (hint: Use option 1 to view all products and get product ID: "))
             rating = int(input("Enter the rating (1-5): "))
             review_text = input("Enter your review: ")
-            add_review(product_name, rating, review_text)
+            add_customer_review(product_id, rating, review_text)
+            print("\n\033[1m Thank you for your review!\033[0m\n")
             break
         elif choice == 'No':
             print("No review added.")
@@ -170,7 +172,7 @@ def ask_for_review():
             print("Invalid choice. Please enter 'yes' or 'no'.")
 
 
-# a function to display the main menu and allow users to navigate the program
+# Display the main menu and allow users to navigate the program
 def run():
     basket = []
     selection = 100
@@ -229,17 +231,16 @@ def run():
             quit()
 
 
-# main program
+# Run main program / customer menu
 
-print("\n\t>>>\tWELCOME TO TEAM GREEN'S ONLINE SHOP!\t<<<")
-print("\n>>>\tWhen the going gets tough, the tough get growing! \t<<<")
+print("\n\t>>>\t\033[1m\U0001F33A WELCOME TO TEAM GREEN'S ONLINE SHOP! \U0001F33A\033[0m\t<<<")
+print("\n>>>\t\033[1m\U0001F331 When the going gets tough, the tough get growing! \U0001F331\033[0m\t<<<")
 run()
 
 
 
 
 # development notes
-
 
     # def make_purchase():
         # check if item is in basket and if not tell user basket is empty
