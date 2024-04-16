@@ -192,6 +192,7 @@ def run():
                     quantity = get_quantity()
                     for i in range(quantity):
                         basket.append(product)
+                    print("\nYour shopping basket has been updated!\n")
                     print("\n", basket, "\n")
                 else:
                     go_back = True
@@ -205,6 +206,7 @@ def run():
                     quantity = get_quantity()
                     for i in range(quantity):
                         basket.append(product)
+                    print("\nYour shopping basket has been updated!\n")
                     print("\n", basket, "\n")
                 else:
                     go_back = True
