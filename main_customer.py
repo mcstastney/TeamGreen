@@ -248,4 +248,4 @@ run()
         # edit basket (select code to edit item)
         # delete item or change quantity
         # book delivery slot (could give options pick up in store or deliver)
-        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT)
+        # make purchase (add basket details to order table Post, update the stock quantity in the products table PUT).

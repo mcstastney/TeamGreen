@@ -1,7 +1,29 @@
 # TeamGreen project
 An API for customers and staff to use and manage an online garden centre shop.
 
-## About the project
+## Table of Contents
+1. About the project
+    - Software used
+    - Future updates
+2. How to install and run the project
+    - About requirements.txt
+3. How to use the project
+    - Summary of design principles and testing
+    - Functionality of main_staff.py and how to use it
+    - Functionality of main_customer.py and how to use it
+4. Credits
+    - TeamGreen members
+    - References
+5. License
+6. Evidence of Git and Github skills
+    - Checking the status of a file
+    - Creating a branch
+    - Adding files to a branch
+    - Adding commits with meaningful messages
+    - Opening a pull request
+    - Merging and deploying to main branch
+
+## 1. About the project
 
 This API can be used by customers to search and order products from the garden centre’s online shop and add product reviews. 
 Garden centre staff can use the API to add and update stock, and to access and add customer information.
@@ -34,7 +56,7 @@ For future releases, we will add the following new features:
 - Staff can view delivery schedule.
 - Options for users to undo / edit actions.
 
-## How to install and run the project
+## 2. How to install and run the project
 1.	Clone the TeamGreen repository to your local machine using the url [https://github.com/mcstastney/TeamGreen.git ](https://github.com/mcstastney/TeamGreen.git)
 2.	Open the project files in Pycharm or Visual Studio Code
 3.	From your Pycharm or Visual Studio Code terminal, install the project requirements by running: **pip install -r requirements.txt**
@@ -49,7 +71,7 @@ For future releases, we will add the following new features:
 requirements.txt is a file that contains a list of packages and libraries that you'll need to work on the project. 
 For TeamGreen's project, you can run: **pip install -r requirements.txt** in your Python / VSC terminal to install all of the relevant packages from the requirements.txt file. 
 
-## How to use the project
+## 3. How to use the project
 There are two main.py files: **main_customer.py** and **main_staff.py**.  Users can directly interact with the API by running the functions within the main.py files. 
 
 main_customer.py has been designed to be accessed directly by customers to use for retail shopping purposes. 
@@ -174,7 +196,7 @@ In further iterations of the app, users will be able to search for products by e
 
 If they decide not to proceed with their shopping, the user can quit the program. 
 
-## Credits
+## 4. Credits
 ### TeamGreen members
 This team project is a collaboration between four developers:
 
@@ -230,10 +252,10 @@ We are grateful to the following people / organisations for their tuition, resou
 - Tech with Tim’s [Create A Python API in 12 Minutes video](https://www.youtube.com/watch?v=zsYIw6RXjfM)
 - [PyNative](https://pynative.com/python/basics/) 
 
-## License
+## 5. License
 [GNU General Public License v3.0](License)
 
-## Evidence of Git and Github skills
+## 6. Evidence of Git and Github skills
 (**Note:** Our project was initially called TeamElemella and changed to TeamGreen at a later date, so some screenshots are to different repos.)
 
 ### Checking the status of a file
